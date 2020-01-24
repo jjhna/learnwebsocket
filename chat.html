@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<title>WebSocket Chat with XMPP</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="chat.css">
+<h1>WebSocket Chat with XMPP</h1>
+
+<!-- connect -->
+<div class="panel">   
+    <input type="text" id="username" placeholder="username">   
+    <input type="password" id="password" placeholder="password">   
+    <button id="connectButton">Connect</button>
+</div>
+<div id="presenceArea" class="panel"></div>
+<div id="chatArea" class="panel"></div>
+<div id="output"></div>
+<!-- scripts -->
+<script src="strophe.js"></script>
+<script src="chat_app.js"></script>
+
