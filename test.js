@@ -19,7 +19,6 @@ function setup() {
         console.log("Connected to websocket address: " + this.url); 
         console.log("The address is type: " + ws + " " + ws.binaryType);
         sendMessage("Hello SAGE2!");
-        setUpListeners();
     }
         
     // Listen for the close connection event   
@@ -50,18 +49,4 @@ function sendMessage(msg){
     //ws.send('{"H": "publicmaphub", "M": "getData", "A":[], "I":1}');
     ws.send('{"f": "0010", "d": "null"}')
     console.log("Message sent: " + msg);   
-}
-
-function setUpListeners()
-{
-    ws.on('initialize', function(data) {
-		var startTime  = new Date(data.start);
-		ws.UID = data.UID;
-
-		// Global initialization
-		SAGE2_initialize(startTime);
-
-		// Request list of assets
-		ws.emit('requestStoredFiles');
-	});
 }
