@@ -6,6 +6,8 @@
 //
 // See full text, terms and conditions in the LICENSE.txt included file
 //
+
+//Requires an App or App Id for usage
 // Copyright (c) 2014-17
 
 /*
@@ -347,7 +349,7 @@ var SAGE2Connection = {
 	Modified from public/src/websocket.io.js
 	*/
 	WebsocketIO: function(url) {
-		url = "ws://localhost:9292"; //Add this content?
+		//url = "ws://localhost:9292"; //Add this content?
 		if (url !== undefined && url !== null) {
 			this.url = url;
 			if (this.url.indexOf("ws") === -1) { // needs to be a websocket connection
